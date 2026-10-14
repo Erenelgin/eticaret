@@ -148,13 +148,14 @@
                                          eklenen.innerText = m.urun[i];
                                          eklenen.classList.add("eklnn");
                                          E.appendChild(eklenen);
-                                           })
-            eklenen.addEventListener("click", function(){
-                    let yanit = window.alert("sileceksen 1 yaz");
+                                           
+               eklenen.addEventListener("click", function(){
+                    let yanit = window.prompt("sileceksen 1 yaz");
                     if(yanit == 1){
                        eklenen.remove();
                        totalfiyat -= m.fiyat[i];
                     }
+            })
             })
                
            }
