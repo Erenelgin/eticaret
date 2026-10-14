@@ -147,7 +147,7 @@
                yeniurun.classList.add("urun-karti");
                yeniurun.addEventListener("click", function(){window.alert(m.urun[i] + " seçildi! Fiyatı: " + m.fiyat[i] + " TL"); 
                                          totalfiyat+=m.fiyat[i];
-                                         tf.textContent=totalfiyat;
+                                         tf.textContent=totalfiyat + " (sil)";
               				   let eklenen = document.createElement("p");
                                          eklenen.innerText = m.urun[i];
                                          eklenen.classList.add("eklnn");
