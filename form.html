@@ -1,0 +1,246 @@
+﻿<!DOCTYPE html>
+<html lang='tr'>
+ <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <meta charset='UTF-8'>
+  <script src="https://unpkg.com/@dotlottie/player-component@latest/dist/dotlottie-player.mjs" type="module"></script>
+  <style>
+    *{
+      margin:0;
+      padding:0;
+      box-sizing:border-box;
+
+     }
+    body{
+      width:100%;
+      height:100vh;
+      background-image:url('1.png');
+      background-size:cover;
+      background-position:center;
+      background-repeat:no-repeat;
+     
+     }
+
+    .container{
+      display:flex;
+      justify-content:center;
+      align-items:center;
+      
+
+     }
+
+     .CONT{  
+        margin-top:110px;
+        position:relative;
+        width:300px;
+        height:440px;
+        border:2px solid rgba(255, 255, 255, 0.3);
+        border-radius:13px;
+        overflow:hidden;
+        background-color:rgba(30, 144, 255, 0.35);
+        box-shadow:rgba(0, 0, 0, 0.2);
+        animation-name:slide;
+        animation-duration:2s;
+        
+     }
+
+     .FORM{
+       text-align:center;
+       margin-top:30px;
+       position:absolute;
+       width:300px;
+       top:100px;
+       transition:0.5s ease;
+           
+     }
+
+     .form-item{
+       margin-top:30px;
+       border-radius:20px;
+       height:40px;
+       border:none;
+       cursor:pointer;
+       width:90%;
+       padding:12px 12px;
+       outline:none;
+       background-color:#FFFFFFE6;
+       color:#2B2D42;
+       
+
+      }
+
+     .form-item:hover{
+        box-shadow:3px 3px 3px blue;
+      }
+
+      .form-item:focus{
+         background-color:#1E90FF;
+      }
+
+
+     .button-box{
+       padding:30px;
+       text-align:center;
+       margin-top:20px;
+
+
+
+     }
+
+     .ust{
+       padding:6px;
+       outline:none;
+       cursor:pointer;
+       border:none;
+       border-radius:20px;
+       width:93px;
+       background-color:#FFFFFF;
+       color:#2B2D42;
+       height:30px;
+     }
+
+     #form2{
+       left:400px;
+     }
+
+     #btn-renk{
+       position:absolute;
+       background-color:rgba(122, 34, 255, 0.50);
+       width:100px;
+       height:31px;
+       left:50px;
+       border-radius:13px;
+       transition:0.5s ease;
+       
+       
+     }  
+
+
+      a{
+       color:#FFD169;
+
+
+     }
+
+      a:hover{
+        color:#FFC43D;
+      }
+
+      i{
+       color:#FFFFFF;
+
+      }  
+
+      .form-button{
+         padding:6px;
+         outline:none;
+         cursor:pointer;
+         border:none;
+         border-radius:20px;
+         width:90px;
+         background-color:#1E90FF;
+         color:#2B2D42
+         height:30px; 
+         box-shadow:3px 3px 3px gray; 
+
+      }
+
+      #kayit:hover, #giris:hover{
+        background-color:#0066CC;
+        
+
+      }
+      #reset:hover, #reset2:hover{
+        background-color:#495057;
+
+      }
+
+      @keyframes slide{
+        from{
+            opacity:0;
+            transform:translateX(-40px);
+
+          }
+        to{
+          opacity:1;
+          transform:translateX(0px);
+          }
+
+     }
+
+      .keddy{
+        margin-top:-30px;
+        position:absolute;
+        left:80px;
+
+      }
+
+  </style>
+ </head>
+ <body>
+  <header>
+   <div class='container'>
+    <div class='CONT'>  
+      <div class='button-box'>
+        <div id='btn-renk'></div>      
+         <button id='buton1' class='ust'>GİRİŞ YAP</button>
+         <button id='buton2' class='ust'>KAYIT OL</button>    
+       </div> 
+       <dotlottie-player 
+           class='keddy'
+           src="https://lottie.host/293abc25-c015-4c1a-8737-65116b176397/WQVNw4kDTL.lottie"
+           background="transparent"
+           speed="1"
+           style="width: 130px; height: 130px;"
+           loop
+           autoplay>
+      </dotlottie-player>
+     <form id='form1' class='FORM'>    
+      <input class='form-item' type='text' placeholder='Kullanıcı Adı:' required>
+      <br>
+       
+      <input class='form-item' type='password' placeholder='Şifre:' required>
+      <br><br><i>Şifreni mi unuttun? <a href='#' id='unut'>TIKLA!</a></i>
+      <br><br>
+         <button type='submit' class='form-button' id='giris'>GİRİŞ</button>
+         <button type='reset' class='form-button' id='reset2'>SIFIRLA</button>   
+      </form>
+     <form id='form2' class='FORM'>    
+      <input class='form-item' type='text' placeholder='Ad Soyad:' required>
+      <br>
+      <input class='form-item' type='email' placeholder='Email:' required> 
+      <br>
+      <input class='form-item' type='password' placeholder='Şifre:' required>
+      <br><br>
+         <button type='submit' class='form-button' id='kayit'>KAYIT OL</button>
+         <button type='reset' class='form-button' id='reset'>SIFIRLA</button>   
+      </form>
+    </div>
+   </div>
+  </header>
+  <script>
+     a = document.getElementById('buton1');
+     b = document.getElementById('buton2');
+     c = document.getElementById('form1');
+     d = document.getElementById('form2');
+     e = document.getElementById('btn-renk');
+     f = document.getElementById('unut');
+
+     b.onclick = function(){
+        c.style.left = "-400px";
+        d.style.left = "0px"; 
+        e.style.left = "150px";   
+     }
+     a.onclick = function(){      
+        c.style.left = "0px";
+        d.style.left = "400px"; 
+        e.style.left = "50px";   
+     }
+
+     f.onclick = function(){
+        window.alert('Unutmayaydın a..');
+     }
+  </script>
+ </body>
+</html>
