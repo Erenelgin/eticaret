@@ -144,11 +144,18 @@
                yeniurun.addEventListener("click", function(){window.alert(m.urun[i] + " seçildi! Fiyatı: " + m.fiyat[i] + " TL"); 
                                          totalfiyat+=m.fiyat[i];
                                          tf.textContent=totalfiyat;
-              				 let eklenen = document.createElement("p");
+              				   let eklenen = document.createElement("p");
                                          eklenen.innerText = m.urun[i];
                                          eklenen.classList.add("eklnn");
                                          E.appendChild(eklenen);
                                            })
+            eklenen.addEventListener("click", function(){
+                    let yanit = window.alert("sileceksen 1 yaz");
+                    if(yanit == 1){
+                       eklenen.remove();
+                       totalfiyat -= m.fiyat[i];
+                    }
+            })
                
            }
      }
