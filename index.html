@@ -19,7 +19,7 @@
            height:30px;
            background-color:#ffd674;
            color:red;
-           font-size:10px;
+           font-size:15px;
            text-align:center;
            padding:3px;
            border-radius:20px;
@@ -125,7 +125,6 @@
   <div class='ODM'>
    <h4>SEPETİM</h4>
    <div id='EKLENEN'></div><br>
-   <p class='T'>Toplam Tutar(tl):</p><br>
    <p id='total'></p><br>
    <a href='form.html' class='odeme'>ONAYLA</a>
   </div>
@@ -162,7 +161,7 @@
                yeniurun.classList.add("urun-karti");
                yeniurun.addEventListener("click", function(){window.alert(m.urun[i] + " seçildi! Fiyatı: " + m.fiyat[i] + " TL"); 
                                          totalfiyat+=m.fiyat[i];
-                                         tf.textContent=totalfiyat;
+                                         tf.textContent=totalfiyat + "(tl)";
               				   let eklenen = document.createElement("p");
                                          eklenen.innerText = m.urun[i] + " (sil)";
                                          eklenen.classList.add("eklnn");
