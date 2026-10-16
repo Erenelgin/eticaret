@@ -214,7 +214,7 @@
                                          E.appendChild(eklenen);
                                            
                eklenen.addEventListener("click", function(){
-                    let yanit = window.alert(eklenen + " silindi");  
+                    let yanit = window.alert(m.urun[i] + " silindi");  
                        eklenen.remove();
                        totalfiyat -= m.fiyat[i];
                        tf.textContent = totalfiyat;
