@@ -90,6 +90,7 @@
              text-align:center;
              background-color:rgba(254, 120, 128, 0.70);
              color:#ffdb6b;
+             display:none;
              
 
             }
@@ -110,6 +111,10 @@
              box-shadow:3px 3px 3px red;
            }
 
+        .dropdown:hover .ODM{
+           display:block;
+        }
+
           @media (max-width:760px){
               #U{
                 font-size:15px;
@@ -122,13 +127,15 @@
    <div id='U'></div>
    <br>
    <div id='magaza'></div>
+ <div class='dropdown'>
+  <button id='but'>BUTTON</button>
   <div class='ODM'>
    <h4>SEPETİM</h4>
    <div id='EKLENEN'></div><br>
    <p id='total'></p><br>
    <a href='form.html' class='odeme'>ONAYLA</a>
   </div>
-
+ </div>
  <script>  
     let divimiz = document.getElementById('magaza');
     let divimiz2 = document.getElementById('U');
