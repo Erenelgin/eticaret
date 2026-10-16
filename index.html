@@ -214,12 +214,10 @@
                                          E.appendChild(eklenen);
                                            
                eklenen.addEventListener("click", function(){
-                    let yanit = window.prompt("sileceksen 1 yaz");
-                    if(yanit == 1){
+                    let yanit = window.alert(eklenen + " silindi");  
                        eklenen.remove();
                        totalfiyat -= m.fiyat[i];
                        tf.textContent = totalfiyat;
-                    }
             })
             })
                
