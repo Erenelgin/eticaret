@@ -109,6 +109,9 @@
              color:rgba(34, 34, 34, 1);
              display:none;
              backdrop-filter: blur(8px);
+             transition:3s ease;
+             animation-name:anim;
+             animation-duration:3s;
              z-index:1001;
              
 
@@ -228,6 +231,17 @@
          bottom:0;
          background-color:rgba(255, 255, 255, 0.9);
        }
+
+          @keyframes anim{
+            from{
+                 transform:translateX(-20px);
+                 opacity:0;
+                }
+            to{
+               transform:translateX(0);
+               opacity:1;
+            }
+          }
 
           @media (max-width:760px){
               #U{
